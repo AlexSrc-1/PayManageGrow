@@ -16,6 +16,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/illustrator" />
     <LinearLayout
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="wrap_content"
@@ -49,7 +50,6 @@
                 android:text="@string/onboarding_subtitle"/>
         </LinearLayout>
         <Button
-            android:id="@+id/get_started"
             style="@style/OnBoardingButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
                 android:fontFamily="@font/sfprodisplayregular"
                 android:lineHeight="20sp"
                 android:textColor="#707070"
-                android:textSize="14sp"
+                android:textSize="14sp"  android:layout_marginHorizontal="5dp"
                 android:text="Already have account?"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -85,6 +85,119 @@
                 android:textColor="#FFFFFF"
                 android:textSize="14sp"
                 android:text="Sign in"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sfprodisplaybold"
+            android:lineHeight="46sp"
+            android:text="Get Started"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp"
+            android:layout_margin="20dp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            style="@style/LayoutTopShape"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                android:layout_marginHorizontal="30dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sfprodisplaylight"
+                    android:lineHeight="38sp"
+                    android:text="Please enter the mobile phone number"
+                    android:textColor="#000000"
+                    android:textSize="29sp"
+                    android:layout_marginTop="50dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sfprodisplaylight"
+                    android:lineHeight="21sp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:text="Phone Number"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sfprodisplaybold"
+                        android:lineHeight="38sp"
+                        android:text="+7"
+                        android:textColor="#000000"
+                        android:textSize="29sp"
+                        android:layout_marginTop="10dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sfprodisplaybold"
+                        android:lineHeight="38sp"
+                        android:text=" (999) 999 - 32 - 93"
+                        android:textColor="#686868"
+                        android:textSize="29sp"
+                        android:layout_marginTop="10dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/get_started"
+                style="@style/OnBoardingButtonEnable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:fontFamily="@font/sfprodisplayregular"
+                android:lineHeight="20sp"
+                android:textColor="#ffffff"
+                android:textSize="17sp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="40dp"
+                android:textAllCaps="false"
+                android:text="Get Started"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sfprodisplayregular"
+                    android:lineHeight="20sp"
+                    android:textColor="#000000"
+                    android:textSize="14sp"  android:layout_marginHorizontal="5dp"
+                    android:text="Already have account?"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sfprodisplayregular"
+                    android:lineHeight="20sp"
+                    android:textColor="#1E32FA"
+                    android:textSize="14sp"
+                    android:text="Sign in"/>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
