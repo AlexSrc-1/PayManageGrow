@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#1E32FA"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="725dp"
+        android:layout_height="607dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/illustrator" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:layout_marginHorizontal="30dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfprodisplaybold"
+                android:lineHeight="55sp"
+                android:text="@string/onboarding_title"
+                android:textColor="#FFFFFF"
+                android:textSize="52sp"
+
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfprodisplayregular"
+                android:lineHeight="20sp"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:text="@string/onboarding_subtitle"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/get_started"
+            style="@style/OnBoardingButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:fontFamily="@font/sfprodisplayregular"
+            android:lineHeight="20sp"
+            android:textColor="#1E32FA"
+            android:textSize="17sp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="40dp"
+            android:textAllCaps="false"
+            android:text="Get Started"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfprodisplayregular"
+                android:lineHeight="20sp"
+                android:textColor="#707070"
+                android:textSize="14sp"
+                android:text="Already have account?"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sfprodisplayregular"
+                android:lineHeight="20sp"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:text="Sign in"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
