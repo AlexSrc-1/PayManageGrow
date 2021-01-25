@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    xmlns:mask="http://schemas.android.com/apk/res-auto"
     android:background="#1E32FA"
     android:layout_height="match_parent">
 
@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/illustrator" />
     <LinearLayout
-        android:visibility="gone"
+        android:id="@+id/onboarding_l_1"
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="wrap_content"
@@ -50,6 +50,7 @@
                 android:text="@string/onboarding_subtitle"/>
         </LinearLayout>
         <Button
+            android:id="@+id/get_started_login"
             style="@style/OnBoardingButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -88,6 +89,7 @@
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
+        android:id="@+id/onboarding_l_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -148,57 +150,100 @@
                         android:textColor="#000000"
                         android:textSize="29sp"
                         android:layout_marginTop="10dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:fontFamily="@font/sfprodisplaybold"-->
+<!--                        android:lineHeight="38sp"-->
+<!--                        android:text="(999)-999-99-99"-->
+<!--                        android:textColor="#686868"-->
+<!--                        android:textSize="29sp"-->
+<!--                        android:layout_marginTop="10dp"/>-->
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/phone_number"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:phoneNumber="true"-->
+<!--                        android:inputType="phone"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:fontFamily="@font/sfprodisplaybold"-->
+<!--                        android:textColor="#686868"-->
+<!--                        android:lineHeight="38sp"-->
+<!--                        android:textSize="29sp"/>-->
+<!--                    <br.com.sapereaude.maskedEditText.MaskedEditText-->
+<!--                        android:id="@+id/phone_input"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:inputType="phone"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:fontFamily="@font/sfprodisplaybold"-->
+<!--                        android:textColor="#686868"-->
+<!--                        android:lineHeight="38sp"-->
+<!--                        android:textSize="29sp"-->
+<!--                        mask:allowed_chars="123456789"-->
+<!--                        mask:mask="(###)-###-##-##"-->
+<!--                        app:keep_hint="true"-->
+<!--                        />-->
+                    <mk.webfactory.dz.maskededittext.MaskedEditText
+                        android:id="@+id/edit_masked_input"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:hint="xxx-xxx-xxx"
+                        android:minWidth="200dp"
+                        app:maskededittext_enforceMaskLength="false"
+                        app:maskededittext_mask="(###) ###-##-##"
+                        android:phoneNumber="true"
+                        android:inputType="phone"
+                        app:maskededittext_maskCharacter="#"
+                        android:layout_marginTop="10dp"
                         android:fontFamily="@font/sfprodisplaybold"
-                        android:lineHeight="38sp"
-                        android:text=" (999) 999 - 32 - 93"
                         android:textColor="#686868"
+                        android:lineHeight="38sp"
                         android:textSize="29sp"
-                        android:layout_marginTop="10dp"/>
-                </LinearLayout>
+                                            />
+                                    </LinearLayout>
 
-            </LinearLayout>
-            <Button
-                android:id="@+id/get_started"
-                style="@style/OnBoardingButtonEnable"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="30dp"
-                android:fontFamily="@font/sfprodisplayregular"
-                android:lineHeight="20sp"
-                android:textColor="#ffffff"
-                android:textSize="17sp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginTop="40dp"
-                android:textAllCaps="false"
-                android:text="Get Started"
-                />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_marginBottom="20dp"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/sfprodisplayregular"
-                    android:lineHeight="20sp"
-                    android:textColor="#000000"
-                    android:textSize="14sp"  android:layout_marginHorizontal="5dp"
-                    android:text="Already have account?"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/sfprodisplayregular"
-                    android:lineHeight="20sp"
-                    android:textColor="#1E32FA"
-                    android:textSize="14sp"
-                    android:text="Sign in"/>
-            </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
+                                </LinearLayout>
+                                <Button
+                                    android:id="@+id/get_started"
+                                    style="@style/OnBoardingButtonEnable"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="30dp"
+                                    android:fontFamily="@font/sfprodisplayregular"
+                                    android:lineHeight="20sp"
+                                    android:textColor="#ffffff"
+                                    android:textSize="17sp"
+                                    android:layout_marginBottom="20dp"
+                                    android:layout_marginTop="40dp"
+                                    android:textAllCaps="false"
+                                    android:text="Get Started"
+                                    />
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:layout_marginBottom="20dp"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/sfprodisplayregular"
+                                        android:lineHeight="20sp"
+                                        android:textColor="#000000"
+                                        android:textSize="14sp"  android:layout_marginHorizontal="5dp"
+                                        android:text="Already have account?"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/sfprodisplayregular"
+                                        android:lineHeight="20sp"
+                                        android:textColor="#1E32FA"
+                                        android:textSize="14sp"
+                                        android:text="Sign in"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
